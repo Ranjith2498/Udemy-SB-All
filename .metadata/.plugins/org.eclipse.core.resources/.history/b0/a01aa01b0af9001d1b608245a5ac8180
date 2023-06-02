@@ -1,0 +1,22 @@
+package com.demo.example;
+
+import java.util.Random;
+
+
+
+
+ public class Exmpl {
+
+	public static void main(String[] args) throws Exception {
+
+		Integer i =42;
+		
+		String s = (i<40)?"life":(i>50)?"Uni":"eve";
+		System.out.println(s);
+		
+	}
+
+}
+
+
+

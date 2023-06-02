@@ -1,0 +1,78 @@
+package com.example.rest.SbRest6;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.annotation.PostConstruct;
+
+@RequestMapping("/test")
+@RestController
+
+public class DemoController {
+	
+	private List<Student> al;
+	
+	@PostConstruct()
+	public void some()
+	{
+		//Best because data is one time load
+	    al = new ArrayList<>();
+		al.add(new Student("Ranjith","Kumar"));
+		al.add(new Student("Rakesh","Singh"));
+		al.add(new Student("Rajath","Verma"));
+		al.add(new Student("Tejas","Jain"));
+	}
+	
+	@GetMapping("/student")
+	public List<Student> something()
+	{
+		return al;	
+	}
+	
+	@GetMapping("student/{studentId}")
+	public Student getStudent(@PathVariable int studentId)
+	{
+		
+		if((studentId>=al.size())||(studentId<0))
+		{
+			throw new StudentNotFoundException("Student id not found - "+studentId);
+		}
+		return al.get(studentId);	
+	}
+	
+	
+	//Add exception handlerusing @Exceptionahandler
+	
+	@ExceptionHandler
+	public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException exc)
+	{
+		
+		StudentErrorResponse error = new StudentErrorResponse();
+		error.setMessage(exc.getMessage());
+		error.setStatus(HttpStatus.NOT_FOUND.value());
+		error.setTimestamp(System.currentTimeMillis());
+		return new ResponseEntity<>(error,HttpStatus.NOT_FOUND);
+	}
+	
+	
+	
+	//add another exceptoion handler ... to catch any exception(catch all)
+	@ExceptionHandler
+	public ResponseEntity<StudentErrorResponse> handleException(Exception exc)
+	{
+		
+		StudentErrorResponse error = new StudentErrorResponse();
+		error.setMessage(exc.getMessage());
+		error.setStatus(HttpStatus.BAD_REQUEST.value());
+		error.setTimestamp(System.currentTimeMillis());
+		return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
+	}
+}

@@ -1,0 +1,27 @@
+package com.demo.example;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class NewDemo {
+
+	private static NewDemo d = new NewDemo();
+	
+	private NewDemo();
+	
+	
+	public static NewDemo getDemo()
+	{
+		if(d==null)
+		{
+			d=new NewDemo();
+			
+		}
+		
+		
+		
+		
+	}
+
+}

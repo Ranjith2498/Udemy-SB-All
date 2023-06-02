@@ -1,0 +1,14 @@
+package com.example.io.SbIOC;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class DemoController {
+
+	private Coach coach;
+
+	@Autowired
+	public void setCoach(Coach coach) {
+		this.coach = coach;
+	}
+	
+}

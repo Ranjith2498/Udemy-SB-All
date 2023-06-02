@@ -1,0 +1,29 @@
+package com.example.hibernateExample.HibernateDemo;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HibernateDemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HibernateDemoApplication.class, args);
+		
+		SessionFactory factory = new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
+		Session session = factory.getCurrentSession();
+		
+		try {
+			Student student = new Student(1,"Ranjith","K","8747849699");
+		}
+		finally
+		{
+			factory.close();
+		}
+				
+	
+	}
+
+}

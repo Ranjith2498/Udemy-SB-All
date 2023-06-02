@@ -1,0 +1,57 @@
+
+}	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(óÙèÛùÿÿÿÿHõ	RMINORZ
+CODE_SMELL
+z
+java:S3655&"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ê†§ùúÿÿÿÿHö	RMAJORZBUG
+z
+java:S3655 "PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÊÃ×‡ÿÿÿÿÿH÷	RMAJORZBUG
+g	java:S125"<This block of commented-out lines of code should be removed.(ÝÚ¢èHø	RMAJORZ
+CODE_SMELL
+}
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ä¨uHü	RMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(þûê¡ýÿÿÿÿHý	RMAJORZ
+CODE_SMELL
+g	java:S125"<This block of commented-out lines of code should be removed.(¸þÀðHþ	RMAJORZ
+CODE_SMELL
+q
+java:S1612 "@Replace this lambda with method reference 'Employee::getSalary'.(ÊÃ×‡ÿÿÿÿÿH€
+RMINORZ
+CODE_SMELL
+i	java:S106!"9Replace this use of System.out or System.err by a logger.(°ìÂÊþÿÿÿÿH‚
+RMAJORZ
+CODE_SMELL
+~
+java:S6204#"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(—…žðHƒ
+RMAJORZ
+CODE_SMELL
+c	java:S106$"9Replace this use of System.out or System.err by a logger.(¹¼Œ5H„
+RMAJORZ
+CODE_SMELL
+q
+java:S1612&"@Replace this lambda with method reference 'Employee::getSalary'.(Ê†§ùúÿÿÿÿH…
+RMINORZ
+CODE_SMELL
+s
+java:S1612&"BReplace this lambda with method reference 'Comparable::compareTo'.(Ê†§ùúÿÿÿÿH‡
+RMINORZ
+CODE_SMELL
+d	java:S106'"9Replace this use of System.out or System.err by a logger.(»ª½ÕH‰
+RMAJORZ
+CODE_SMELL
+{	java:S1162"QRename this field "Salary" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ú˜-HŠ
+RMINORZ
+CODE_SMELL
+]
+java:S1128"1Remove this unused import 'java.util.Comparator'.(î¹ó¹H‹
+RMINORZ
+CODE_SMELL
+`
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëÝüÿÿÿÿH
+RMINORZ
+CODE_SMELL
+`
+java:S1128"4Remove this unused import 'java.util.stream.Stream'.(ó÷Ž”H
+RMINORZ
+CODE_SMELL

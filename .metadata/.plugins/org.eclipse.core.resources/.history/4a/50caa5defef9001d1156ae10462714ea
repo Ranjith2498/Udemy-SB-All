@@ -1,0 +1,49 @@
+package com.example.RestCrud.SbRestCrudDemo9;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class DemoSecurityConfig {
+	
+	@Bean
+	public InMemoryUserDetailsManager userDetailsManager()
+	{
+		UserDetails John = User.builder().username("John").password("{noop}test123").roles("EMPLOYEE").build();
+		UserDetails Ranjith = User.builder().username("Ranjith").password("{noop}test123").roles("EMPLOYEE","MANAGER").build();
+		UserDetails Vikas = User.builder().username("Vikas").password("{noop}test123").roles("EMPLOYEE","MANAGER","ADMIN").build();
+		return new InMemoryUserDetailsManager(John,Ranjith,Vikas);
+		
+	}
+	
+	//To give specific permission to roles(ex Employee can only read info, manager can edit or create user, admin can delete info)
+	
+	@Bean 
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception { 
+	 http.authorizeHttpRequests(configurer -> 
+	 configurer 
+	 .requestMatchers(HttpMethod.GET, "/api/employees").hasRole("EMPLOYEE") 
+	 .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("EMPLOYEE") 
+	 .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("MANAGER") 
+	 .requestMatchers(HttpMethod.PUT, "/api/employees").hasRole("MANAGER") 
+	 .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN"));
+	 
+	 
+	 // use HTTP Basic authentication 
+	 http.httpBasic(); 
+	 
+	// disable Cross Site Request Forgery (CSRF) 
+	 //In general its not used for stateless REST API that use POST PUT DELETE and/or PATCH
+	 //http.csrf().disable();
+	 
+	 return http.build(); 
+	}
+	
+
+}

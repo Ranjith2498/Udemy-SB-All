@@ -1,0 +1,32 @@
+package com.example.io.SbIOC;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class CrudDemo {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CrudDemo.class, args);}
+		
+		@Bean
+		
+		public CommandLineRunner commandLineRunner(StudentDAO studentdao)
+		{
+			return runner->{
+				System.out.println("Helow world");
+				};
+			
+			createStudent(studentdao);
+		}
+
+		private void createStudent(StudentDAO studentdao) {
+			
+			System.out.println("Creating student");
+			Student student = new Student("Ranjith","Kumar","rk@gmail.com");
+			
+			StudentDAO.save(student);
+		}
+}

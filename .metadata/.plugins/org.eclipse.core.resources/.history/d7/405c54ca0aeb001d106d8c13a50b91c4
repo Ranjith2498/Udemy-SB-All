@@ -1,0 +1,5 @@
+server.port=8080
+
+info.app.name="Ranjith app"
+management.endpoint.web.exposure.include=*
+management.info.env.enabled=true

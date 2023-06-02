@@ -1,0 +1,11 @@
+package com.example.io.SbIOC;
+
+public class SportConfig {
+	
+	@Bean
+	public Coach swimCoach()
+	{
+		return new SwimCoach();
+	}
+
+}

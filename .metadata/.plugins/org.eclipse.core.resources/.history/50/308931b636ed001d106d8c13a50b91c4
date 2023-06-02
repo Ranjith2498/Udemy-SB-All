@@ -1,0 +1,30 @@
+package com.example.RestCrud.SbRestCrudDemo9;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
+
+
+@Component
+public class EmployeeDAOJpaImpl implements EmployeeDAO {
+	
+	private EntityManager entity;
+	
+	@Autowired
+	public EmployeeDAOJpaImpl(EntityManager entity) {
+		super();
+		this.entity = entity;
+	}
+
+	@Override
+	public List<Employee> findAll() {
+		Query empList = entity.createQuery("from Employee",Employee.class);
+		List<Employee> employees = empList.getResultList();
+		return employees;
+	}
+
+}

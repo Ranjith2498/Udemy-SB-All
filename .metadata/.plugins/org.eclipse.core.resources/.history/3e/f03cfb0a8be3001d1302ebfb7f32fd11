@@ -1,0 +1,21 @@
+package com.demo;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a=0,b=0,sum = 1,i,j;
+		
+		for(i=0;i<100;i++)
+		{
+			a=b;
+			b=sum;
+			sum=a+b;
+			System.out.println(sum);
+		}
+		
+
+	}
+
+}

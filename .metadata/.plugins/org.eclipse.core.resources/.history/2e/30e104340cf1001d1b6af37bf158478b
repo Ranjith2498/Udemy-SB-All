@@ -1,0 +1,32 @@
+package com.demo.example;
+
+class Test{
+	
+	private static Test a = new Test(); //Early instamtiation
+	
+	private Test()
+	{
+		
+	}
+	public static Test getTest()
+	{
+		if(a==null)
+		{
+			a = new Test();
+			
+		}
+		return a;
+	}
+}
+
+
+
+public class Apps {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

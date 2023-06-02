@@ -1,0 +1,36 @@
+
+x	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Üµ‰ìHÑ	RMINORZ
+CODE_SMELL
+m
+java:S2184"CCast one of the operands of this subtraction operation to a "long".(áÃÜüÿÿÿÿÿHÒ	RMINORZBUG
+z
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¥ÁÀÿÿÿÿÿHÓ	RMAJORZBUG
+z
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(áÃÜüÿÿÿÿÿHÔ	RMAJORZBUG
+g
+java:S1854";Remove this useless assignment to local variable "someday".(È¨äãHÕ	RMAJORZ
+CODE_SMELL
+j
+java:S1854"9Remove this useless assignment to local variable "today".(ô“æÚşÿÿÿÿHÖ	RMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(¥ÁÀÿÿÿÿÿH×	RMAJORZ
+CODE_SMELL
+s
+java:S1612"BReplace this lambda with method reference 'Comparable::compareTo'.(¥ÁÀÿÿÿÿÿHØ	RMINORZ
+CODE_SMELL
+c	java:S106"9Replace this use of System.out or System.err by a logger.(È“VHÚ	RMAJORZ
+CODE_SMELL
+d	java:S106"9Replace this use of System.out or System.err by a logger.(‚¨Ö§HÛ	RMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(Ñ¸˜°ùÿÿÿÿHÜ	RMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(†ÃÈøşÿÿÿÿHİ	RMAJORZ
+CODE_SMELL
+i	java:S106"9Replace this use of System.out or System.err by a logger.(¢“¡µÿÿÿÿÿHŞ	RMAJORZ
+CODE_SMELL
+[
+java:S1481"*Remove this unused "today" local variable.(ô“æÚşÿÿÿÿHß	RMINORZ
+CODE_SMELL
+X
+java:S1481",Remove this unused "someday" local variable.(È¨äãHá	RMINORZ
+CODE_SMELL

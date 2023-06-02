@@ -1,0 +1,22 @@
+package com.example.io.SbIOC;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@RestController
+public class DemoController {
+
+	private Coach coach;
+
+	@Autowired
+	public void setCoach(Coach coach) {
+		this.coach = coach;
+	}
+	
+	@GetMapping("getDailyworkout")
+	public String soemthing() {
+		return coach.getDailyWorkout();
+	}
+	
+}

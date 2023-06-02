@@ -1,0 +1,22 @@
+package com.demo.example;
+
+
+class Something extends Thread
+{
+	public void run()
+	{
+		System.out.println("Something");
+	}
+}
+
+public class Apps {
+
+	public static void main(String[] args) {
+
+		Something s =  new Something();
+		s.start();	
+		
+		System.out.println("Main Thread");	
+	}
+
+}

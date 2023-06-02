@@ -1,0 +1,18 @@
+package com.example.hibernateExample.HibernateDemo;
+
+import org.hibernate.annotations.Table;
+
+import jakarta.persistence.Entity;
+
+
+@Entity
+@Table(appliesTo = "Student")
+public class Student {
+	
+	@Id
+	@Column(name="id")
+	
+	
+	
+
+}

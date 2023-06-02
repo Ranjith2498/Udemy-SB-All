@@ -1,0 +1,9 @@
+package com.example.io.SbIOC;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public interface Coach {
+
+	public String getDailyWorkout();
+}

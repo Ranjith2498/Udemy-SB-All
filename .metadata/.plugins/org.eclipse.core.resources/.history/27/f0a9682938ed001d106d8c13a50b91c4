@@ -1,0 +1,30 @@
+package com.example.RestCrud.SbRestCrudDemo9;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/test")
+public class RestJpaDemo {
+	
+	private EmployeeDAO empDao;
+
+	@Autowired
+	public RestJpaDemo(EmployeeDAO empDao) {
+		super();
+		this.empDao = empDao;
+	}
+	
+	@GetMapping("/employees")
+	public List<Employee> something()
+	{
+		return empDao.findAll();
+	}
+	
+	
+
+}

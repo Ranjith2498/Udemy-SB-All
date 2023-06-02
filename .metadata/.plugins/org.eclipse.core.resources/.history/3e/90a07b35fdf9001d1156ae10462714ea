@@ -1,0 +1,22 @@
+package com.example.RestCrud.SbRestCrudDemo9;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
+@Configuration
+public class DemoSecurityConfig {
+	
+	@Bean
+	public InMemoryUserDetailsManager userDetailsManager()
+	{
+		UserDetails John = User.builder().username("John").password("{noop}test123").roles("EMPLOYEE").build();
+		UserDetails Ranjith = User.builder().username("Ranjith").password("{noop}test123").roles("EMPLOYEE","MANAGER").build();
+		UserDetails Vikas = User.builder().username("Vikas").password("{noop}test123").roles("EMPLOYEE","MANAGER","ADMIN").build();
+		return new InMemoryUserDetailsManager(John,Ranjith,Vikas);
+		
+	}
+
+}

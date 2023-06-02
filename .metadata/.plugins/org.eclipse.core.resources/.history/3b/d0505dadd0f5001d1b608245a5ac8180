@@ -1,0 +1,64 @@
+package com.demo.example;
+
+import java.util.Random;
+
+
+
+
+ public class Exmpl {
+
+	public static void main(String[] args) {
+
+//		
+//		String s ="Ranjith";
+//		String s1 ="Ranjith";
+//		
+//		System.out.println(s.equals(s1));
+//		System.out.println(s==s1);
+//		
+//        Random random = new Random();
+//        
+////        random.ints(5, 0, 6).forEach(System.out::println);
+//        random.ints(5,0,5).forEachOrdered(System.out::println);
+		
+//		try {
+//			a();
+//			System.out.println("1");
+//		}
+//		catch(Exception e)
+//		{
+//			System.out.println("2");
+//		}
+//		finally {
+//			System.out.println("3");
+//		}
+//		System.out.println("4");
+//		
+//		
+//		float f[] = new float[5];
+//		Object obj = f;
+//		System.out.println(f[0]);
+		
+		boolean testB = false;
+		if(testB=true)
+		{
+			System.out.println("1");
+		}
+		else
+		{
+			System.out.println("2");
+		}
+		
+		
+			
+	}
+
+	private static void a() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+
+

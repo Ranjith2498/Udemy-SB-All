@@ -1,0 +1,26 @@
+package com.demo;
+
+public class a2b3c4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s = "a2b3c4";
+		int i,j,k,count=0;
+		
+		for(i=0;i<s.length();i++)
+		{
+			for(j=i+1;j<s.length();j++)
+			{
+				if(s.charAt(i)>=48&&s.charAt(i)<=56&& !((j+1)>=48)&& !((j+1)<=56))
+				{
+//					count+=Integer.parseInt(s.charAt(j));
+				}
+			}
+		}
+		
+		
+		
+	}
+
+}

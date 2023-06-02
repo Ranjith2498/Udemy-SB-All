@@ -1,0 +1,5 @@
+package com.minutes.microservices.currencyexchangeservice;
+
+public class CurrencyExchangeController {
+
+}

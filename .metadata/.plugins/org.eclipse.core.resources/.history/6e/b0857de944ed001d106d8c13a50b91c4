@@ -1,0 +1,5 @@
+package com.example.RestCrud.SbRestCrudDemo9;
+
+public interface EmployeeRepositoty extends JpaRepositoty<> {
+
+}

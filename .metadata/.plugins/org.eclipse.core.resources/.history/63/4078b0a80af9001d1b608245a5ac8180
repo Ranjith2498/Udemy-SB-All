@@ -1,0 +1,32 @@
+package com.demo.example;
+
+import java.util.Random;
+
+ class A extends Thread
+{
+
+public void run()
+{
+	System.out.println("running");
+}
+}
+
+
+
+ public class Exmpl {
+
+	public static void main(String[] args) throws Exception {
+A a = new A();
+System.out.println(a.getName());
+a.start();
+a.setName("Arun");
+System.out.println(a.getName());
+
+
+		
+	}
+
+}
+
+
+

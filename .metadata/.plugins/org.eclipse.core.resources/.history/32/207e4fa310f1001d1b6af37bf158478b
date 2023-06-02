@@ -1,0 +1,41 @@
+package com.demo.example;
+
+class Test{
+	
+	private static Test a = new Test(); //Early instamtiation
+	
+	private Test()
+	{	}
+	
+	public static Test getTest()
+	{
+		if(a==null)
+		{
+			a = new Test();	
+		}
+		return a;
+	}
+	
+}
+
+
+class Demo{
+	
+	public Demo(Test a, Test b)
+	{
+		System.out.println("Only one object is created"+(a==b));
+	}
+}
+
+
+
+public class Apps {
+
+	public static void main(String[] args) {
+		
+//		Test t1 = new Test();
+		
+		
+	}
+
+}

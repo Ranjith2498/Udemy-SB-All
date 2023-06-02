@@ -1,0 +1,39 @@
+package com.example.io.SbIOC;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
+
+
+@Repository
+public class StudentDAOImpl implements StudentDAO {
+
+	private EntityManager entity;
+	
+	
+	public StudentDAOImpl() {
+		super();
+	}
+
+	@Autowired
+	public StudentDAOImpl(EntityManager entity) {
+		super();
+		this.entity = entity;
+	}
+
+	@Override
+	@Transactional
+	public void save(Student student) {
+		entity.persist(student);
+
+	}
+
+	@Override
+	public Student findById(Integer id) {
+		return entity.find(Student.class,id);
+		
+	}
+
+}

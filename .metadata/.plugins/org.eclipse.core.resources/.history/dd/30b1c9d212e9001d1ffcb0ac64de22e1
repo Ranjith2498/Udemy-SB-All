@@ -1,0 +1,28 @@
+package com.example.hibernateExample.HibernateDemo;
+
+import org.hibernate.annotations.Table;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+
+@Entity
+@Table(appliesTo = "Student")
+public class Student {
+	
+	@Id
+	@Column(name="id")
+	private int id;
+	
+	@Column(name="firstname")
+	private String firstname;
+	
+	@Column(name="lastname")
+	private String lastname;
+	
+	@Column(name="phone")
+	private int phone;
+	
+
+}

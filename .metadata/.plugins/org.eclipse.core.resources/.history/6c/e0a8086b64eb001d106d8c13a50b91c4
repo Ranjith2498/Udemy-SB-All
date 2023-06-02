@@ -1,0 +1,20 @@
+package com.example.io.SbIOC;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class DemoController {
+
+	private Coach coach;
+
+	@Autowired
+	public void setCoach(Coach coach) {
+		this.coach = coach;
+	}
+	
+	@GetMapping("coach")
+	public void soemthing() {
+		coach.getDailyWorkout();
+	}
+	
+}

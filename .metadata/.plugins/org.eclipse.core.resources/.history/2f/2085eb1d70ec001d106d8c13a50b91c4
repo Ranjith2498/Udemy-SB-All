@@ -1,0 +1,13 @@
+package com.example.io.SbIOC;
+
+import java.util.List;
+
+public interface StudentDAO {
+	
+	void save(Student student);
+	Student findById(Integer id);
+	List<Student> findAll();
+	List<Student> findLastName();
+	List<Student> findLastName(String theLastName);
+
+}

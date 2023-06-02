@@ -1,0 +1,16 @@
+package com.demo.example;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+public class NewDemo {
+
+	public static void main(String[] args) {
+	
+	
+		
+		Stream.of(3,2,12,56,78,19).filter(a-> !(a%2)!=0)
+	}
+
+}

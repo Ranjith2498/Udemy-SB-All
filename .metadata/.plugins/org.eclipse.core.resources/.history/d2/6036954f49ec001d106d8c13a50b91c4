@@ -1,0 +1,13 @@
+package com.example.io.SbIOC;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CrudDemo {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CrudDemo.class, args);
+	}
+
+}

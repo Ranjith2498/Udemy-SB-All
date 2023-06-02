@@ -1,0 +1,17 @@
+package com.demo;
+
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+
+public class SumOfIntegers_Java8 {
+
+	public static void main(String[] args) {
+
+		List<Integer> numbers = Arrays.asList(5, 4, 10, 12, 87, 33, 75);
+		int sum = numbers.stream().sorted().skip(1).findFirst().get();
+		System.out.println(sum);
+		
+	}
+
+}

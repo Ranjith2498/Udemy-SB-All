@@ -1,0 +1,13 @@
+spring.application.name=api-gateway
+server.port=8765
+
+#Optional
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka
+
+#This will help in calling(CURRENCY-EXCHANGE = instance in Eureka)--> http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+#spring.cloud.gateway.discovery.locator.enabled=true
+
+#Thi will make sure  url is in smaller case only(just to have uniformity)
+#spring.cloud.gateway.discovery.locator.lowerCaseServiceId=true
+
+spring.cloud.config.import-check.enabled=false

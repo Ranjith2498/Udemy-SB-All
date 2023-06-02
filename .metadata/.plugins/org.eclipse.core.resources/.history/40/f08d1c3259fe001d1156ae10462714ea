@@ -1,0 +1,5 @@
+package com.minutes.microservices.limitservice.controller;
+
+public class LimitsController {
+
+}

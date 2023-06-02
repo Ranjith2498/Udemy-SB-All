@@ -1,0 +1,23 @@
+package com.demo;
+
+import java.util.StringTokenizer;
+
+public class StringTokenizer_StringReverse {
+
+	public static void main(String[] args) {
+		
+		 String s = "Java Code Geeks - Java Examples";
+         
+	        StringTokenizer st = new StringTokenizer(s," ");
+	          
+	        String sReversed = "";
+	          
+	        while (st.hasMoreTokens()) {
+	            sReversed = st.nextToken() + " " + sReversed;
+	            System.out.println("Reverse - "+sReversed);
+	        }
+	         
+//	        System.out.println("Original string is : " + s);
+//	        System.out.println("Reversed string is : " + sReversed);
+	}
+}

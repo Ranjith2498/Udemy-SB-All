@@ -1,0 +1,56 @@
+package com.demo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MaxOccuringAlphabet {
+	
+	public static void main(String[] args)
+	{
+		String s = "fababced";
+		int sum=0;
+		
+		Map<String,Integer> mp = new HashMap<>();
+		for(int i=0;i<s.length();i++)
+		{
+			int count=1;
+			for(int j=i+1;j<s.length()-1;j++)
+			{
+				if(s.charAt(i)==s.charAt(j))
+				{
+					count++;
+				}
+			}
+			char c=s.charAt(i);
+			mp.put(String.valueOf(c),count);
+//			
+		}
+//		
+		String ra = mp.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		String keyWithMaxValue = mp.entrySet().stream().max(Map.Entry.comparingByValue()).get().getKey();
+
+        System.out.println("Key with max value: " + keyWithMaxValue);
+		
+		
+		
+	}
+
+}

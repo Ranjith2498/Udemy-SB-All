@@ -1,0 +1,29 @@
+package com.demo.example;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class NewDemo {
+
+	public static void main(String[] args) {
+		int [] nums = {8, 7, 2, 5, 3, 1};
+		int i,j,sum=10;
+		
+		for(i=0;i<nums.length;i++)
+		{
+			for(j=i+1;j<nums.length-1;j++)
+			{
+				if(nums[i]+nums[j]==sum)
+				{
+					System.out.println(nums[i]+","+nums[j]);
+				}
+			}
+		}
+		
+		
+		
+		
+	}
+
+}

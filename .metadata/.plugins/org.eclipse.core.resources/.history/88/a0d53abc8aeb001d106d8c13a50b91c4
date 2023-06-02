@@ -1,0 +1,28 @@
+package com.demo.example;
+
+import java.util.concurrent.locks.ReentrantLock;
+
+public class NewDemo {
+
+	private static NewDemo d = new NewDemo();
+	
+	private NewDemo() {
+		
+	}
+	
+	
+	public static NewDemo getDemo()
+	{
+		ReentrantLock rk = new ReentrantLock();
+		
+		rk.lock();
+		if(d==null)
+		{
+			d=new NewDemo();
+			
+		}
+		rk.unlock();
+		return d;
+	}
+
+}

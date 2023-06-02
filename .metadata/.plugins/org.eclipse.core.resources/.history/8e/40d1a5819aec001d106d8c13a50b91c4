@@ -1,0 +1,10 @@
+package com.example.rest.SbRest6;
+
+
+
+
+@RequestMapping("/test")
+@DemoController
+public class DemoController {
+
+}

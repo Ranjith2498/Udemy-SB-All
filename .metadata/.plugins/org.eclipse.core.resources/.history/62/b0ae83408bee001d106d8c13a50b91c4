@@ -1,0 +1,33 @@
+package com.demo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MaxOccuringAlphabet {
+	
+	public static void main(String[] args)
+	{
+		String s = "fabaced";
+		int sum=0;
+		
+		Map<Character,Integer> mp = new HashMap<>();
+		for(int i=0;i<s.length();i++)
+		{
+			int count=1;
+			for(int j=i+1;j<s.length()-1;j++)
+			{
+				if(s.charAt(i)==s.charAt(j))
+				{
+					count++;
+				}
+			}
+			
+			mp.put(s.charAt(i),count);
+//			
+		}
+		
+		
+		
+	}
+
+}
